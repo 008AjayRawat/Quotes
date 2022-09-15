@@ -16,3 +16,5 @@ rootProject.name = "Quotes"
 include(":app")
 include(":authorQuotes")
 include(":core")
+include(":tagQuotes")
+include(":resources")

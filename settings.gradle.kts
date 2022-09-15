@@ -13,5 +13,6 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "Quotes"
-include ':app'
-include ':authorQuotes'
+include(":app")
+include(":authorQuotes")
+include(":core")

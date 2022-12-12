@@ -1,6 +1,8 @@
 plugins {
     id("com.android.application")
     id("org.jetbrains.kotlin.android")
+    id("kotlin-kapt")
+    id("androidx.navigation.safeargs")
 }
 
 android {
@@ -40,9 +42,24 @@ dependencies {
     implementation(Dependencies.coreKtx)
     implementation(Dependencies.appCompat)
     implementation(Dependencies.material)
+    implementation(Dependencies.constraintLayout)
 
     implementation(Dependencies.navigationFragment)
     implementation(Dependencies.navigationUi)
 
+    implementation(Dependencies.lifecycle)
+    implementation(Dependencies.viewModel)
+    kapt(Dependencies.lifecycleKapt)
+
+    implementation(Dependencies.dagger)
+    kapt(Dependencies.daggerKapt)
+
+    implementation(Dependencies.coroutineCore)
+    implementation(Dependencies.coroutineAndroid)
+
+    implementation(Dependencies.retrofit)
+    implementation(Dependencies.retrofitConverterGson)
+    implementation(Dependencies.loggingInterceptor)
+    implementation(Dependencies.gson)
 
 }

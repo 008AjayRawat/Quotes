@@ -2,8 +2,8 @@ object Dependencies {
     val coreKtx by lazy { "androidx.core:core-ktx:${Versions.coreKtxVersion}" }
 
     val appCompat by lazy { "androidx.appcompat:appcompat:${Versions.appCompatVersion}" }
-
     val material by lazy { "com.google.android.material:material:${Versions.materialDesignVersion}" }
+    val constraintLayout by lazy { "androidx.constraintlayout:constraintlayout:${Versions.constraintLayout}" }
 
     val lifecycle by lazy { "androidx.lifecycle:lifecycle-runtime-ktx:${Versions.lifecycleVersion}" }
     val lifecycleKapt by lazy { "androidx.lifecycle:lifecycle-compiler:${Versions.lifecycleVersion}" }
@@ -27,6 +27,8 @@ object Dependencies {
     val retrofitConverterGson by lazy {"com.squareup.retrofit2:converter-gson:${Versions.retrofitVersion}"}
     val loggingInterceptor by lazy { "com.squareup.okhttp3:logging-interceptor:${Versions.loggingInterceptor}" }
     val gson by lazy { "com.google.code.gson:gson:${Versions.gson}" }
+    //A lightweight sealed API library for modeling Retrofit response and handling exception.
+    val sandwich by lazy { "com.github.skydoves:sandwich:1.3.0" }
 
     val workManager by lazy {"androidx.work:work-runtime-ktx:${Versions.workManagerVersion}"}
 

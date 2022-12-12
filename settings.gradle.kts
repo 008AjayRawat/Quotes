@@ -14,8 +14,9 @@ dependencyResolutionManagement {
 }
 rootProject.name = "Quotes"
 include(":app")
-include(":featureAuthorQuotes")
-include(":core")
-include(":tagQuotes")
 include(":resources")
-include(":base")
+include(":feature:authorQuotes")
+include(":feature:tagQuotes")
+include(":data")
+include(":core:network")
+include(":feature:randomQuotes")

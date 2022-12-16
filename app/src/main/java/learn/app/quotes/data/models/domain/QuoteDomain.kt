@@ -1,6 +1,6 @@
-package learn.app.quotes.data.dto.domain
+package learn.app.quotes.data.models.domain
 
-data class RandomQuoteDomain(
+data class QuoteDomain(
     val id: String,
     val content: String,
     val author: String,

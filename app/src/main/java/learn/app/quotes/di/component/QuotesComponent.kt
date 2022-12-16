@@ -1,35 +1,36 @@
 package learn.app.quotes.di.component
 
-import android.app.Application
-import android.content.Context
-import dagger.BindsInstance
 import dagger.Component
-import learn.app.quotes.di.module.NetworkModule
+import learn.app.quotes.core.di.component.CoreComponent
+import learn.app.quotes.di.module.DaoModule
 import learn.app.quotes.di.module.ViewModelFactoryModule
 import learn.app.quotes.di.module.ViewModelModule
 import learn.app.quotes.di.module.WebServiceModule
-import learn.app.quotes.ui.QuotesApplication
+import learn.app.quotes.di.scope.FeatureScope
 import learn.app.quotes.ui.fragments.RandomQuoteFragment
 
+@FeatureScope
 @Component(
-    modules = [ViewModelFactoryModule::class,
+    dependencies = [CoreComponent::class],
+    modules = [
+        ViewModelFactoryModule::class,
         ViewModelModule::class,
-        NetworkModule::class,
-        WebServiceModule::class]
+        WebServiceModule::class,
+        DaoModule::class
+    ]
 )
 interface QuotesComponent {
-    companion object {
-        val Application.appComponent
-            get() = (this as QuotesApplication).appComponent
-    }
+//    @Component.Builder
+//    interface Builder {
+//        fun coreComponent(coreComponent: CoreComponent): Builder
+//        fun build(): QuotesComponent
+//    }
 
     @Component.Factory
     interface Factory {
-        fun create(@BindsInstance context: Context): QuotesComponent
+        fun create(coreComponent: CoreComponent): QuotesComponent
     }
 
-
-    fun provideContext(): Context
 
     fun inject(randomQuoteFragment: RandomQuoteFragment)
 }

@@ -1,4 +1,6 @@
-package learn.app.quotes.data.dto.remote
+package learn.app.quotes.data.models.dto.remote
+
+import com.google.gson.annotations.SerializedName
 
 /**
 _id: string
@@ -8,7 +10,8 @@ authorSlug: string --> The `slug` of the quote author
 length: number --> The length of quote (number of characters)
 tags: string[] -->An array of tag names for this quote
  */
-data class RandomQuoteNetwork(
+data class QuoteNetwork(
+    @SerializedName("_id")
     val id: String?,
     val content: String?,
     val author: String?,

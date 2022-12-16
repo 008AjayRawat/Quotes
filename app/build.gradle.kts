@@ -54,6 +54,11 @@ dependencies {
     implementation(Dependencies.dagger)
     kapt(Dependencies.daggerKapt)
 
+    implementation(Dependencies.room)
+    implementation(Dependencies.roomKtx)
+    kapt(Dependencies.roomKapt)
+
+
     implementation(Dependencies.coroutineCore)
     implementation(Dependencies.coroutineAndroid)
 
@@ -61,5 +66,7 @@ dependencies {
     implementation(Dependencies.retrofitConverterGson)
     implementation(Dependencies.loggingInterceptor)
     implementation(Dependencies.gson)
+
+
 
 }

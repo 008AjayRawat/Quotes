@@ -7,6 +7,7 @@ import learn.app.quotes.di.module.ViewModelFactoryModule
 import learn.app.quotes.di.module.ViewModelModule
 import learn.app.quotes.di.module.WebServiceModule
 import learn.app.quotes.di.scope.FeatureScope
+import learn.app.quotes.ui.fragments.ComposeRandomQuoteFragment
 import learn.app.quotes.ui.fragments.RandomQuoteFragment
 
 @FeatureScope
@@ -16,7 +17,7 @@ import learn.app.quotes.ui.fragments.RandomQuoteFragment
         ViewModelFactoryModule::class,
         ViewModelModule::class,
         WebServiceModule::class,
-        DaoModule::class
+        DaoModule::class,
     ]
 )
 interface QuotesComponent {
@@ -31,6 +32,8 @@ interface QuotesComponent {
         fun create(coreComponent: CoreComponent): QuotesComponent
     }
 
-
     fun inject(randomQuoteFragment: RandomQuoteFragment)
+
+    fun inject(randomQuoteFragment: ComposeRandomQuoteFragment)
+
 }

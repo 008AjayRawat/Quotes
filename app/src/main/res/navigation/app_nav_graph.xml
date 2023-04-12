@@ -3,11 +3,17 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/app_nav_graph"
-    app:startDestination="@id/randomQuoteFragment">
+    app:startDestination="@id/composeRandomQuoteFragment">
 
     <fragment
         android:id="@+id/randomQuoteFragment"
         android:name="learn.app.quotes.ui.fragments.RandomQuoteFragment"
         android:label="fragment_random_quote"
         tools:layout="@layout/fragment_random_quote" />
+
+    <fragment
+        android:id="@+id/composeRandomQuoteFragment"
+        android:name="learn.app.quotes.ui.fragments.ComposeRandomQuoteFragment"
+        android:label="fragment_random_quote" />
+
 </navigation>

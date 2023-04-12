@@ -2,7 +2,7 @@ package learn.app.quotes.data.repository.quotes.source
 
 import learn.app.quotes.data.database.dao.QuotesDao
 import learn.app.quotes.data.models.domain.QuoteDomain
-import learn.app.quotes.data.models.dto.mapper.toDomain
+import learn.app.quotes.data.models.mapper.toDomain
 import learn.app.quotes.data.models.local.QuotesLocal
 import learn.app.quotes.data.repository.quotes.contracts.IQuoteLocalContract
 import learn.app.quotes.utils.network.DataStatus

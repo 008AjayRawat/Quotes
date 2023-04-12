@@ -1,4 +1,4 @@
-package learn.app.quotes.data.models.dto.remote
+package learn.app.quotes.data.models.remote
 
 import com.google.gson.annotations.SerializedName
 

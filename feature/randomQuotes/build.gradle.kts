@@ -32,7 +32,6 @@ android {
 
 dependencies {
 
-    implementation(project(mapOf("path" to ":data")))
     testImplementation(Dependencies.junit)
     androidTestImplementation(Dependencies.junitAndroid)
     androidTestImplementation(Dependencies.espressoAndroid)

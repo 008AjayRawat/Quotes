@@ -4,6 +4,7 @@ import androidx.lifecycle.ViewModel
 import dagger.Binds
 import dagger.Module
 import dagger.multibindings.IntoMap
+import learn.app.quotes.di.scope.FeatureScope
 import learn.app.quotes.di.scope.ViewModelKey
 import learn.app.quotes.ui.viewmodel.QuoteViewModel
 

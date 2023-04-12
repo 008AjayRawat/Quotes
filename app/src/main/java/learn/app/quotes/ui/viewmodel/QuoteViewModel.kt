@@ -3,6 +3,7 @@ package learn.app.quotes.ui.viewmodel
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import learn.app.quotes.data.models.domain.QuoteDomain
 import learn.app.quotes.data.repository.quotes.QuoteRepository
@@ -17,6 +18,6 @@ class QuoteViewModel @Inject constructor(private val repository: QuoteRepository
 
 
     fun getRandomQuote(source: DataSource = DataSource.NETWORK) {
-        viewModelScope.launch { repository.getRandomQuote(source) }
+        viewModelScope.launch(Dispatchers.IO) { repository.getRandomQuote(source) }
     }
 }

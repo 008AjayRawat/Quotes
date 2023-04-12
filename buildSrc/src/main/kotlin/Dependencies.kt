@@ -5,6 +5,11 @@ object Dependencies {
     val material by lazy { "com.google.android.material:material:${Versions.materialDesignVersion}" }
     val constraintLayout by lazy { "androidx.constraintlayout:constraintlayout:${Versions.constraintLayout}" }
 
+    val composeMaterial3 by lazy { "androidx.compose.material3:material3" }
+    val composePreview by lazy { "androidx.compose.ui:ui-tooling-preview" }
+    val composePreviewDebug by lazy { "androidx.compose.ui:ui-tooling" }
+    val composeNavigationComponent by lazy { "androidx.navigation:navigation-compose:${Versions.composeNavigationVersion}" }
+
     val lifecycle by lazy { "androidx.lifecycle:lifecycle-runtime-ktx:${Versions.lifecycleVersion}" }
     val lifecycleKapt by lazy { "androidx.lifecycle:lifecycle-compiler:${Versions.lifecycleVersion}" }
     val liveData by lazy { "androidx.lifecycle:lifecycle-livedata-ktx:${Versions.lifecycleVersion}" }
@@ -23,19 +28,20 @@ object Dependencies {
     val coroutineAndroid by lazy { "org.jetbrains.kotlinx:kotlinx-coroutines-android:${Versions.coroutineVersion}" }
     val coroutineCore by lazy { "org.jetbrains.kotlinx:kotlinx-coroutines-core:${Versions.coroutineVersion}" }
 
-    val retrofit by lazy {"com.squareup.retrofit2:retrofit:${Versions.retrofitVersion}"}
-    val retrofitConverterGson by lazy {"com.squareup.retrofit2:converter-gson:${Versions.retrofitVersion}"}
+    val retrofit by lazy { "com.squareup.retrofit2:retrofit:${Versions.retrofitVersion}" }
+    val retrofitConverterGson by lazy { "com.squareup.retrofit2:converter-gson:${Versions.retrofitVersion}" }
     val loggingInterceptor by lazy { "com.squareup.okhttp3:logging-interceptor:${Versions.loggingInterceptor}" }
     val gson by lazy { "com.google.code.gson:gson:${Versions.gson}" }
+
     //A lightweight sealed API library for modeling Retrofit response and handling exception.
     val sandwich by lazy { "com.github.skydoves:sandwich:1.3.0" }
 
-    val workManager by lazy {"androidx.work:work-runtime-ktx:${Versions.workManagerVersion}"}
+    val workManager by lazy { "androidx.work:work-runtime-ktx:${Versions.workManagerVersion}" }
 
-    val glide by lazy {"com.github.bumptech.glide:glide:${Versions.glideVersion}"}
+    val glide by lazy { "com.github.bumptech.glide:glide:${Versions.glideVersion}" }
     val glideKapt by lazy { "com.github.bumptech.glide:compiler:${Versions.glideVersion}" }
 
-    val junit by lazy {"junit:junit:${Versions.junitVersion}"}
+    val junit by lazy { "junit:junit:${Versions.junitVersion}" }
     val junitAndroid by lazy { "androidx.test.ext:junit:${Versions.junitAndroidVersion}" }
 
     val espressoAndroid by lazy { "androidx.test.espresso:espresso-core:${Versions.espressoAndroidVersion}" }

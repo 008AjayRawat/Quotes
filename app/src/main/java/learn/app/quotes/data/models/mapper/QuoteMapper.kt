@@ -1,7 +1,7 @@
-package learn.app.quotes.data.models.dto.mapper
+package learn.app.quotes.data.models.mapper
 
 import learn.app.quotes.data.models.domain.QuoteDomain
-import learn.app.quotes.data.models.dto.remote.QuoteNetwork
+import learn.app.quotes.data.models.remote.QuoteNetwork
 import learn.app.quotes.data.models.local.QuotesLocal
 
 fun QuoteNetwork.toDomain(): QuoteDomain {

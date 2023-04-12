@@ -5,8 +5,8 @@ import androidx.lifecycle.MutableLiveData
 import learn.app.quotes.data.api.QuotesService
 import learn.app.quotes.data.database.dao.QuotesDao
 import learn.app.quotes.data.models.domain.QuoteDomain
-import learn.app.quotes.data.models.dto.mapper.toDomain
-import learn.app.quotes.data.models.dto.mapper.toLocal
+import learn.app.quotes.data.models.mapper.toDomain
+import learn.app.quotes.data.models.mapper.toLocal
 import learn.app.quotes.data.models.local.QuotesLocal
 import learn.app.quotes.utils.enums.DataSource
 import learn.app.quotes.utils.network.DataStatus

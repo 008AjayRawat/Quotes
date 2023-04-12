@@ -16,6 +16,13 @@ android {
         versionName = ConfigData.versionName
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
+        vectorDrawables {
+            useSupportLibrary = true
+        }
+    }
+
+    buildFeatures {
+        compose = true
     }
 
     buildTypes {
@@ -24,12 +31,23 @@ android {
             proguardFiles(getDefaultProguardFile("proguard-android-optimize.txt"), "proguard-rules.pro")
         }
     }
+
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
+
     kotlinOptions {
         jvmTarget = "1.8"
+    }
+
+    composeOptions {
+        kotlinCompilerExtensionVersion = "${Versions.composeVersion}"
+    }
+    packagingOptions {
+        resources {
+            excludes += "/META-INF/{AL2.0,LGPL2.1}"
+        }
     }
 }
 
@@ -44,11 +62,24 @@ dependencies {
     implementation(Dependencies.material)
     implementation(Dependencies.constraintLayout)
 
+
+    val composeBom = platform("androidx.compose:compose-bom:2023.01.00")
+    implementation(composeBom)
+    androidTestImplementation(composeBom)
+    implementation ("androidx.compose.runtime:runtime-livedata:${Versions.composeVersion}")
+    implementation(Dependencies.composeMaterial3)
+    implementation(Dependencies.composePreview)
+    implementation(Dependencies.composeNavigationComponent)
+    androidTestImplementation("androidx.compose.ui:ui-test-junit4:${rootProject.extra["compose_version"]}")
+    debugImplementation(Dependencies.composePreviewDebug)
+
     implementation(Dependencies.navigationFragment)
     implementation(Dependencies.navigationUi)
 
     implementation(Dependencies.lifecycle)
     implementation(Dependencies.viewModel)
+    debugImplementation("androidx.compose.ui:ui-tooling:${rootProject.extra["compose_version"]}")
+    debugImplementation("androidx.compose.ui:ui-test-manifest:${rootProject.extra["compose_version"]}")
     kapt(Dependencies.lifecycleKapt)
 
     implementation(Dependencies.dagger)

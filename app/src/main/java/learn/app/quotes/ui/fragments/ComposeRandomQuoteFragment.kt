@@ -40,18 +40,11 @@ class ComposeRandomQuoteFragment : Fragment() {
         return ComposeView(requireContext()).apply {
             setContent {
                 QuotesTheme(false) {
-                    RandomQuotesView(quoteViewModel) {
-                        quoteViewModel.getRandomQuote()
-                    }
+                    RandomQuotesView(quoteViewModel = quoteViewModel)
                 }
             }
         }
     }
 
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        //Fetch Random Quote.
-        quoteViewModel.getRandomQuote()
-    }
 
 }

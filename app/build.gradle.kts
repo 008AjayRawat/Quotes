@@ -78,6 +78,7 @@ dependencies {
 
     implementation(Dependencies.lifecycle)
     implementation(Dependencies.viewModel)
+    implementation(Dependencies.viewModelCompose)
     debugImplementation("androidx.compose.ui:ui-tooling:${rootProject.extra["compose_version"]}")
     debugImplementation("androidx.compose.ui:ui-test-manifest:${rootProject.extra["compose_version"]}")
     kapt(Dependencies.lifecycleKapt)
